@@ -11,7 +11,7 @@
 	<div align="center">
 		<h2>Ajouter des produits</h2>
 		<s:form action="save" method="post">
-			<s:textfield label="REF" name="produit.ref"></s:textfield>
+			<!--<s:textfield label="REF" name="produit.ref"></s:textfield>-->
 			<s:textfield label="Désignaiton" name="produit.des"></s:textfield>
 			<s:textfield label="Prix" name="produit.prix"></s:textfield>
 			<s:textfield label="Quantité" name="produit.qte"></s:textfield>
