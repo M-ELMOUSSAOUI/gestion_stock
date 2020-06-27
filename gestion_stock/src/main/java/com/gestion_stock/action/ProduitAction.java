@@ -2,6 +2,7 @@ package com.gestion_stock.action;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.gestion_stock.entity.Produit;
@@ -13,12 +14,14 @@ public class ProduitAction extends ActionSupport {
 	/**
 	 * 
 	 */
+	
 	private static final long serialVersionUID = 4059222103174634575L;
 	private Produit produit = new Produit();
 	private List<Produit> produits;
 	
 	@Autowired(required = true)
 	private ICatalogueService service ;
+	
 	
 	String ref;
 	public boolean editMode=false;
@@ -63,22 +66,26 @@ public class ProduitAction extends ActionSupport {
 		if(editMode==false)
 		service.addProduit(produit);
 		else {
-			service.update(produit);
+			service.update(produit); 
 			editMode=false;
-			produit=new Produit();
-			}
+		produit=new Produit();
+		}
 		produits=service.listProduit();
+		System.out.println(editMode);
 
 		return "success";
 	}
 	
 	public String edit() {
 		editMode=true;
+		System.out.println(editMode);
 		produit= service.getProduit(ref);
+	//	service.update(produit);
 		produits=service.listProduit();
-
-		return "success";
+	return "success";
 	}
+	
+
 	
 	public String delete() {
 		service.remove(ref);

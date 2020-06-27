@@ -5,28 +5,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Produits</title>
+<link rel="stylesheet" type ="text/css" href="css/style.css"/>
 </head>
 <body>
 	<div align="center">
-		<h2>Ajouter des produits</h2>
+		<h2>Ajouter un produit</h2>
 		<s:form action="save" method="post">
-			<s:textfield label="REF" name="produit.ref"></s:textfield>
-			<s:textfield label="Désignaiton" name="produit.des"></s:textfield>
-			<s:textfield label="Prix" name="produit.prix"></s:textfield>
-			<s:textfield label="Quantité" name="produit.qte"></s:textfield>
+			<s:textfield label="Code Produit" name="produit.ref"></s:textfield>
+			<s:textfield label="Nom Produit" name="produit.des"></s:textfield>
+			<s:textfield label="Prix Produit" name="produit.prix"></s:textfield>
+			<s:textfield label="Quantité Produit" name="produit.qte"></s:textfield>
 			<s:hidden name="editMode"></s:hidden>
-			<s:submit value="save" />
+			<s:submit value="Enregistrer" />
 		</s:form>
 	</div>
 	<div>
-		<table>
-			<tr>
-				<th>Ref</th>
-				<th>designation</th>
-				<th>Prix</th>
-				<th>Quantite</th>
-			</tr>
+		<table class="table1">
+		<tr>
+<th>Code produit</th><th>Nom produit</th><th>Prix produit</th><th>Quantite produit</th>
+</tr>
 			<s:iterator value="produits">
 				<tr>
 					<td><s:property value="ref" /></td>
@@ -44,7 +42,7 @@
 						</s:param>
 					</s:url>
 					<td> <s:a href="%{lien1}" > Supprimer </s:a> </td>
-					<td> <s:a href="%{lien2}" > edit </s:a> </td>
+					<td> <s:a href="%{lien2}" > Modifier</s:a> </td>
 				</tr>
 			</s:iterator>
 		</table>

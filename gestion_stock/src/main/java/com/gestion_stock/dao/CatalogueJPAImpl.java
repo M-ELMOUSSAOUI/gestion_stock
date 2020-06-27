@@ -49,8 +49,8 @@ public class CatalogueJPAImpl implements ICatalogueDao {
 
 	@Override
 	public void update(Produit p) {
-		// TODO Auto-generated method stub
-
+		// TODO Auto-generated; method stub
+			em.merge(p);
 	}
 
 }

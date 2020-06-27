@@ -10,7 +10,7 @@
 <body>
 	<h1 align="center"> 
 	<s:url namespace="/" action="produits" var="lien1" ></s:url>
-	<s:a href="%{lien1}" > produits1 </s:a>	
+	<s:a href="%{lien1}" > Gestion de Stock </s:a>	
  </h1>
 </body>
 </html>
