@@ -11,10 +11,11 @@
 	<div align="center">
 		<h2>Ajouter des produits</h2>
 		<s:form action="save" method="post">
-			<!--<s:textfield label="REF" name="produit.ref"></s:textfield>-->
+			<s:textfield label="REF" name="produit.ref"></s:textfield>
 			<s:textfield label="Désignaiton" name="produit.des"></s:textfield>
 			<s:textfield label="Prix" name="produit.prix"></s:textfield>
 			<s:textfield label="Quantité" name="produit.qte"></s:textfield>
+			<s:hidden name="editMode"></s:hidden>
 			<s:submit value="save" />
 		</s:form>
 	</div>
@@ -23,8 +24,8 @@
 			<tr>
 				<th>Ref</th>
 				<th>designation</th>
-				<th>quantité</th>
-				<th>prix</th>
+				<th>Prix</th>
+				<th>Quantite</th>
 			</tr>
 			<s:iterator value="produits">
 				<tr>

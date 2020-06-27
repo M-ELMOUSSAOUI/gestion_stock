@@ -3,6 +3,8 @@ package com.gestion_stock.entity;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -14,6 +16,7 @@ public class Produit implements Serializable  {
 	private static final long serialVersionUID = 2930448171741365716L;
 	
 	@Id
+
 	private String ref;
 	private String des;
 	private int prix;

@@ -21,7 +21,7 @@ public class ProduitAction extends ActionSupport {
 	private ICatalogueService service ;
 	
 	String ref;
-	
+	public boolean editMode=false;
 	public Produit getProduit() {
 		return produit;
 	}
@@ -60,7 +60,21 @@ public class ProduitAction extends ActionSupport {
 	}
 	
 	public String save() {
+		if(editMode==false)
 		service.addProduit(produit);
+		else {
+			service.update(produit);
+			editMode=false;
+			produit=new Produit();
+			}
+		produits=service.listProduit();
+
+		return "success";
+	}
+	
+	public String edit() {
+		editMode=true;
+		produit= service.getProduit(ref);
 		produits=service.listProduit();
 
 		return "success";

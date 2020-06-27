@@ -24,6 +24,12 @@
 			class="com.gestion_stock.action.ProduitAction" method="delete">
 			<result name="success">views/produits.jsp </result>
 		</action>
+		
+		
+				<action name="edit"
+			class="com.gestion_stock.action.ProduitAction" method="edit">
+			<result name="success">views/produits.jsp </result>
+		</action>
 	</package>
 
 
