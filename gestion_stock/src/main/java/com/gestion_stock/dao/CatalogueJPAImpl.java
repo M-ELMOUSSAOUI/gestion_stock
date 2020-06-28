@@ -35,13 +35,13 @@ public class CatalogueJPAImpl implements ICatalogueDao {
 	}
 
 	@Override
-	public Produit getProduit(String ref) {
+	public Produit getProduit(int ref) {
 		// TODO Auto-generated method stub
 		return em.find(Produit.class, ref);
 	}
 
 	@Override
-	public void remove(String ref) {
+	public void remove(int ref) {
 		// TODO Auto-generated method stub
 		Produit p = getProduit(ref);
 		em.remove(p);
@@ -51,6 +51,7 @@ public class CatalogueJPAImpl implements ICatalogueDao {
 	public void update(Produit p) {
 		// TODO Auto-generated; method stub
 			em.merge(p);
+			
 	}
 
 }

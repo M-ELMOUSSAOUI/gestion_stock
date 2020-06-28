@@ -93,7 +93,7 @@
 			<version>${spring-framework.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.hibernate</groupId> 
+			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
@@ -128,6 +128,18 @@
 			</exclusions>
 
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.jgeppert.struts2.jquery/struts2-jquery-plugin -->
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-plugin</artifactId>
+			<version>4.0.3</version>
+		</dependency>
+<!-- https://mvnrepository.com/artifact/displaytag/displaytag -->
+<dependency>
+    <groupId>displaytag</groupId>
+    <artifactId>displaytag</artifactId>
+    <version>1.2</version>
+</dependency>
 
 
 	</dependencies>

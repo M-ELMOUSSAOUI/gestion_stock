@@ -2,9 +2,8 @@ package com.gestion_stock.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -16,15 +15,25 @@ public class Produit implements Serializable  {
 	private static final long serialVersionUID = 2930448171741365716L;
 	
 	@Id
-
-	private String ref;
+	@Column(name = "codePdt")
+	private int ref;
+	
+	@Column(name = "nomPdt")
 	private String des;
+	
+	@Column(name = "prixPdt")
 	private int prix;
+	
+	@Column(name = "qtePdt")
 	private int qte;
-	public String getRef() {
+	
+	
+	
+	
+	public int getRef() {
 		return ref;
 	}
-	public void setRef(String ref) {
+	public void setRef(int ref) {
 		this.ref = ref;
 	}
 	public String getDes() {
@@ -45,7 +54,7 @@ public class Produit implements Serializable  {
 	public void setQte(int qte) {
 		this.qte = qte;
 	}
-	public Produit(String ref, String des, int prix, int qte) {
+	public Produit(int ref, String des, int prix, int qte) {
 		super();
 		this.ref = ref;
 		this.des = des;

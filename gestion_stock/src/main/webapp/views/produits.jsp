@@ -6,9 +6,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Produits</title>
-<link rel="stylesheet" type ="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="views/css/style.css"/>
+
 </head>
-<body>
+<body >
 	<div align="center">
 		<h2>Ajouter un produit</h2>
 		<s:form action="save" method="post">

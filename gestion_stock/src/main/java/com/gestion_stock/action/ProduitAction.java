@@ -2,7 +2,6 @@ package com.gestion_stock.action;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.gestion_stock.entity.Produit;
@@ -23,8 +22,9 @@ public class ProduitAction extends ActionSupport {
 	private ICatalogueService service ;
 	
 	
-	String ref;
+	int ref;
 	public boolean editMode=false;
+	
 	public Produit getProduit() {
 		return produit;
 	}
@@ -41,11 +41,11 @@ public class ProduitAction extends ActionSupport {
 		this.produits = produits;
 	}
 
-	public String getRef() {
+	public int getRef() {
 		return ref;
 	}
 
-	public void setRef(String ref) {
+	public void setRef(int ref) {
 		this.ref = ref;
 	}
 
@@ -68,7 +68,7 @@ public class ProduitAction extends ActionSupport {
 		else {
 			service.update(produit); 
 			editMode=false;
-		produit=new Produit();
+			produit=new Produit();
 		}
 		produits=service.listProduit();
 		System.out.println(editMode);
@@ -78,7 +78,7 @@ public class ProduitAction extends ActionSupport {
 	
 	public String edit() {
 		editMode=true;
-		System.out.println(editMode);
+		System.out.println(ref);
 		produit= service.getProduit(ref);
 	//	service.update(produit);
 		produits=service.listProduit();

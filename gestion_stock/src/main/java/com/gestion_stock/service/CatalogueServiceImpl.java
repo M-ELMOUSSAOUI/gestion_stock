@@ -32,13 +32,13 @@ public class CatalogueServiceImpl implements ICatalogueService {
 	}
 
 	@Override
-	public Produit getProduit(String ref) {
+	public Produit getProduit(int ref) {
 		// TODO Auto-generated method stub
 		return dao.getProduit(ref);
 	}
 
 	@Override
-	public void remove(String ref) {
+	public void remove(int ref) {
 		// TODO Auto-generated method stub
 		dao.remove(ref);
 	}
