@@ -22,10 +22,10 @@
 			value="com.mysql.jdbc.Driver">
 		</property>
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/test_db?characterEncoding=utf8">
+			value="jdbc:mysql://localhost:3306/db_gs?characterEncoding=utf8">
 		</property>
-		<property name="username" value="hbstudent"></property>
-		<property name="password" value="hbstudent"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value=""></property>
 	</bean>
 
 	<bean id="persistenceUnitManager"

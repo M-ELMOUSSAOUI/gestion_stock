@@ -17,6 +17,7 @@
 			<s:textfield label="Nom Produit" name="produit.des"></s:textfield>
 			<s:textfield label="Prix Produit" name="produit.prix"></s:textfield>
 			<s:textfield label="Quantité Produit" name="produit.qte"></s:textfield>
+		<s:textarea label="Description Produit" name="produit.desc" length="255"></s:textarea>
 			<s:hidden name="editMode"></s:hidden>
 			<s:submit value="Enregistrer" />
 		</s:form>
@@ -24,7 +25,7 @@
 	<div>
 		<table class="table1">
 		<tr>
-<th>Code produit</th><th>Nom produit</th><th>Prix produit</th><th>Quantite produit</th>
+<th>Code produit</th><th>Nom produit</th><th>Prix produit</th><th>Quantite produit</th><th>Description produit</th>
 </tr>
 			<s:iterator value="produits">
 				<tr>
@@ -32,6 +33,7 @@
 					<td><s:property value="des" /></td>
 					<td><s:property value="prix" /></td>
 					<td><s:property value="qte" /></td>
+					<td><s:property value="desc" /></td>
 					<s:url namespace="/" action="delete" var="lien1">
 						<s:param name="ref">
 							<s:property value="ref" />

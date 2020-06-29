@@ -27,6 +27,9 @@ public class Produit implements Serializable  {
 	@Column(name = "qtePdt")
 	private int qte;
 	
+	@Column(name = "descPdt")
+	private String desc;
+	
 	
 	
 	
@@ -54,12 +57,20 @@ public class Produit implements Serializable  {
 	public void setQte(int qte) {
 		this.qte = qte;
 	}
-	public Produit(int ref, String des, int prix, int qte) {
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	
+	public Produit(int ref, String des, int prix, int qte, String desc) {
 		super();
 		this.ref = ref;
 		this.des = des;
 		this.prix = prix;
 		this.qte = qte;
+		this.desc=desc;
 	}
 	public Produit() {
 		super();
