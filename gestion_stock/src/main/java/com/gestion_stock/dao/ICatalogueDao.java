@@ -10,5 +10,6 @@ public interface ICatalogueDao {
 	public Produit getProduit(int ref);
 	public void remove(int ref);
 	public void update(Produit p);
+	public Produit findByName(String name);
 	
 }

@@ -49,4 +49,10 @@ public class CatalogueServiceImpl implements ICatalogueService {
 		dao.update(p);
 	}
 
+	@Override
+	public Produit findByName(String name) {
+		// TODO Auto-generated method stub
+		return dao.findByName(name);
+	}
+
 }

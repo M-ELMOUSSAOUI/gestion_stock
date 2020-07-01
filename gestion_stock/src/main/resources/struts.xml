@@ -7,7 +7,7 @@
 		value="false" />
 	<constant name="struts.devMode" value="true" />
 	<package name="default" namespace="/" extends="struts-default">
-		<default-action-ref name="index"></default-action-ref>
+		<default-action-ref name="produits"></default-action-ref>
 		<action name="index">
 			<result>views/index.jsp</result>
 		</action>
@@ -19,16 +19,39 @@
 			class="com.gestion_stock.action.ProduitAction" method="save">
 			<result name="success">views/produits.jsp </result>
 		</action>
-	
+
 		<action name="delete"
 			class="com.gestion_stock.action.ProduitAction" method="delete">
 			<result name="success">views/produits.jsp </result>
 		</action>
-		
-		
-				<action name="edit"
+
+		<action name="edit"
 			class="com.gestion_stock.action.ProduitAction" method="edit">
-			<result name="success">views/produits.jsp </result>
+			<result name="success">views/edit_product.jsp </result>
+		</action>
+		<action name="add"
+			class="com.gestion_stock.action.ProduitAction" method="addProduct">
+			<result name="success">views/edit_product.jsp </result>
+		</action>
+		<action name="appr"
+			class="com.gestion_stock.action.Approvisionnement" method="index">
+			<result name="success">views/approv.jsp </result>
+		</action>
+		<action name="addApprov"
+			class="com.gestion_stock.action.Approvisionnement" method="add">
+			<result name="success">views/addApprov.jsp </result>
+		</action>
+		<action name="saveApprov"
+			class="com.gestion_stock.action.Approvisionnement" method="save">
+			<result name="success" >views/approv.jsp </result>
+		</action>
+		<action name="editApprov"
+			class="com.gestion_stock.action.Approvisionnement" method="editApprov">
+			<result name="success"> views/editApprov.jsp </result>
+		</action>
+		<action name="deleteApprov"
+			class="com.gestion_stock.action.Approvisionnement" method="remove">
+			<result name="success">views/approv.jsp </result>
 		</action>
 	</package>
 

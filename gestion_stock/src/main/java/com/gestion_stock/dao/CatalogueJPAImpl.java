@@ -54,4 +54,11 @@ public class CatalogueJPAImpl implements ICatalogueDao {
 			
 	}
 
+	@Override
+	public Produit findByName(String name) {
+		// TODO Auto-generated method stub
+		
+		return (Produit) em.createQuery("select p.des from Produit as p where p= :name ").setParameter("name", name).getSingleResult();
+	}
+
 }

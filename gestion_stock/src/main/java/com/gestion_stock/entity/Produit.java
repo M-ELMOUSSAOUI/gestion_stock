@@ -31,8 +31,6 @@ public class Produit implements Serializable  {
 	private String desc;
 	
 	
-	
-	
 	public int getRef() {
 		return ref;
 	}
@@ -74,6 +72,11 @@ public class Produit implements Serializable  {
 	}
 	public Produit() {
 		super();
+	}
+
+	@Override
+	public String toString() {
+		return "Produit [ref=" + ref + ", des=" + des + ", prix=" + prix + ", qte=" + qte + "]";
 	}
 	
 	

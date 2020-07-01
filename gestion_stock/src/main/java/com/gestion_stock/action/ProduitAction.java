@@ -15,13 +15,12 @@ public class ProduitAction extends ActionSupport {
 	 */
 	
 	private static final long serialVersionUID = 4059222103174634575L;
-	private Produit produit = new Produit();
-	private List<Produit> produits;
 	
 	@Autowired(required = true)
 	private ICatalogueService service ;
 	
-	
+	private Produit produit = new Produit();
+	private List<Produit> produits;	
 	int ref;
 	public boolean editMode=false;
 	
@@ -71,20 +70,23 @@ public class ProduitAction extends ActionSupport {
 			produit=new Produit();
 		}
 		produits=service.listProduit();
-		System.out.println(editMode);
 
 		return "success";
 	}
 	
 	public String edit() {
 		editMode=true;
-		System.out.println(ref);
 		produit= service.getProduit(ref);
-	//	service.update(produit);
+		System.out.println(editMode);
 		produits=service.listProduit();
 	return "success";
 	}
 	
+	public String addProduct() {
+		editMode=false;
+
+		return "success";
+	}
 
 	
 	public String delete() {
